@@ -69,7 +69,9 @@ Dokaz: vstavi sliko 07-brskalnik-stran.png
   - su -c "snap set nextcloud ports.http=8080 ports.https=8443"
 - Dostop za zacetno nastavitev v brskalniku:
   - http://192.168.0.167:8080
-- Ustvarjen uporabnik za sebe in za kolega.
+- Ustvarjena testna uporabnika:
+  - michel (geslo: michel)
+  - test1 (geslo: test1)
 - Prijava v sistem.
 - Nalozena datoteka.
 - Sneta datoteka.

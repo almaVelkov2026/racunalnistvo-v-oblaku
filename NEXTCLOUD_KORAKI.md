@@ -11,15 +11,17 @@ http://192.168.0.167:8080/index.php/login
 Za test imas pripravljena dva racuna:
 
 1. Uporabnik: michel
-2. Uporabnik: kolega
+	Geslo: michel
+2. Uporabnik: test1
+	Geslo: test1
 
-Gesla uporabi enaka kot smo jih nastavili med konfiguracijo. Po koncu vaje gesla obvezno spremeni.
+Po koncu vaje gesla obvezno spremeni.
 
 ## 3) Obvezni testi za dokaz
 1. Prijava v sistem (vsaj z enim racunom).
 2. Nalozi eno datoteko.
 3. Snemi isto datoteko nazaj.
-4. Po zelji preveri tudi drugi racun kolega.
+4. Po zelji preveri tudi drugi racun test1.
 
 ## 4) Screenshoti za Moodle
 - 08-nextcloud-prijava.png

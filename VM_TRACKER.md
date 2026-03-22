@@ -22,11 +22,12 @@ Datum zacetka: 2026-03-22
 - [x] Apache2 zagnan in enabled
 - [x] Preprosta spletna stran pripravljena (ime, priimek, slika, crno ozadje, bel tekst)
 - [x] Datoteke prenesene v /var/www/html
-- [ ] Stran dostopna iz brskalnika prek IP VM
+- [x] Stran dostopna iz brskalnika prek IP VM
 - [x] Nextcloud namescen
 - [ ] Nextcloud testiran (uporabnik, prijava, upload, download)
 - [ ] AWS Free Tier racun ustvarjen
 - [x] GitHub racun/repo ustvarjen
+- [x] GitHub push izveden (origin/master)
 - [ ] 10 vprasanj iz predavanja pripravljenih
 - [ ] Dokazi (screenshoti) vstavljeni v oddajni dokument
 - [ ] Oddaja pripravljena za Moodle
@@ -42,7 +43,9 @@ Datum zacetka: 2026-03-22
 - NAREJENO: snapd je namescen kot priprava za Nextcloud.
 - NAREJENO: nextcloud snap je namescen in storitve so aktivne.
 - NAREJENO: nextcloud je prestavljen na port 8080 (HTTPS 8443), da Apache na portu 80 ostane za spletno stran.
-- NAREJENO: ustvarjena sta Nextcloud uporabnika michel in kolega.
+- NAREJENO: ustvarjena sta Nextcloud uporabnika michel in test1.
+- NAREJENO: po potrditvi deluje tudi dostop do Apache strani na http://192.168.0.167/.
+- NAREJENO: spremembe so commitane in potisnjene na GitHub origin/master.
 - V TEKU: preverba strani iz host brskalnika prek http://192.168.0.167.
 - V TEKU: zacetna nastavitev Nextcloud prek brskalnika na http://192.168.0.167:8080.
 - MANJKA: Nextcloud test (uporabnik, prijava, upload, download), AWS dokaz, finalna oddaja.
@@ -51,7 +54,8 @@ Datum zacetka: 2026-03-22
 1. V host brskalniku odpri http://192.168.0.167/ in shrani 07-brskalnik-stran.png.
 2. V host brskalniku odpri http://192.168.0.167:8080/index.php/login in se prijavi.
 3. Izvedi test prijava, upload in download ter shrani 08-nextcloud-prijava.png in 09-nextcloud-upload-download.png.
-4. Po testu spremeni privzeto geslo racuna michel.
+4. Za test uporabi prijave: michel/michel in test1/test1.
+5. Po testu spremeni privzeti gesli obeh racunov.
 
 ## Evidenca dokazov (screenshoti)
 Shrani v mapo: /home/michel/racunalnistvo v oblaku/dokazi
