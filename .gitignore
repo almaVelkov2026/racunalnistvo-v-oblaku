@@ -1,32 +1,32 @@
-# Sensitive credentials and secrets
+# Secrets and credentials
 .env
 .env.*
 *.key
 *.pem
 *.p12
 *.pfx
-*.crt
-*.csr
+
+# SSH keys
 id_rsa
 id_rsa.pub
 id_ed25519
 id_ed25519.pub
 
-# Temporary and local artifacts
+# Local/editor artifacts
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
 *.log
 *.tmp
 *.swp
 *.swo
 *.bak
 
-# Editor/system files
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Local evidence files for Moodle only
-/dokazi/*.png
-/dokazi/*.jpg
-/dokazi/*.jpeg
-/dokazi/*.webp
+# Local submission materials (keep local only)
+dokazi/
+NEXTCLOUD_KORAKI.md
+ODDAJA_MOODLE.md
+ODDAJA_MOODLE_WORD_TEMPLATE.md
+SLIKE_MAPA_IN_VRSTNI_RED.md
+VM_TRACKER.md
