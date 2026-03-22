@@ -42,15 +42,16 @@ Datum zacetka: 2026-03-22
 - NAREJENO: snapd je namescen kot priprava za Nextcloud.
 - NAREJENO: nextcloud snap je namescen in storitve so aktivne.
 - NAREJENO: nextcloud je prestavljen na port 8080 (HTTPS 8443), da Apache na portu 80 ostane za spletno stran.
+- NAREJENO: ustvarjena sta Nextcloud uporabnika michel in kolega.
 - V TEKU: preverba strani iz host brskalnika prek http://192.168.0.167.
 - V TEKU: zacetna nastavitev Nextcloud prek brskalnika na http://192.168.0.167:8080.
 - MANJKA: Nextcloud test (uporabnik, prijava, upload, download), AWS dokaz, finalna oddaja.
 
 ## Naslednji tocni koraki (za dokoncanje)
 1. V host brskalniku odpri http://192.168.0.167/ in shrani 07-brskalnik-stran.png.
-2. V host brskalniku odpri http://192.168.0.167:8080 in zakljuci zacetni wizard Nextcloud.
-3. Ustvari uporabnika za kolega in zase.
-4. Testiraj prijavo, upload in download ter shrani 08-nextcloud-prijava.png in 09-nextcloud-upload-download.png.
+2. V host brskalniku odpri http://192.168.0.167:8080/index.php/login in se prijavi.
+3. Izvedi test prijava, upload in download ter shrani 08-nextcloud-prijava.png in 09-nextcloud-upload-download.png.
+4. Po testu spremeni privzeto geslo racuna michel.
 
 ## Evidenca dokazov (screenshoti)
 Shrani v mapo: /home/michel/racunalnistvo v oblaku/dokazi
