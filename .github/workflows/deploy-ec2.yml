@@ -85,7 +85,9 @@ jobs:
           set -euo pipefail
           ssh -i /tmp/ec2_key.pem -o StrictHostKeyChecking=no "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}" \
             "chmod +x /tmp/deploy_release.sh /tmp/migrate_rds.sh /tmp/healthcheck.sh /tmp/rollback.sh && \
-             APP_PATH='${{ secrets.APP_PATH }}' ARTIFACT_PATH='/tmp/release.tar.gz' RELEASE_SHA='${{ github.sha }}' /tmp/deploy_release.sh"
+             APP_PATH='${{ secrets.APP_PATH }}' ARTIFACT_PATH='/tmp/release.tar.gz' RELEASE_SHA='${{ github.sha }}' \
+             RDS_HOST='${{ secrets.RDS_HOST }}' RDS_DB='${{ secrets.RDS_DB }}' RDS_USER='${{ secrets.RDS_USER }}' RDS_PASS='${{ secrets.RDS_PASS }}' \
+             /tmp/deploy_release.sh"
 
       - name: Run DB migration on EC2
         run: |

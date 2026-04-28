@@ -8,6 +8,10 @@ RELEASES_DIR="${RELEASES_DIR:-/var/www/releases}"
 CURRENT_LINK="${CURRENT_LINK:-/var/www/current}"
 LAST_FILE="${RELEASES_DIR}/.last_successful"
 PREV_FILE="${RELEASES_DIR}/.previous_successful"
+RDS_HOST="${RDS_HOST:-}"
+RDS_DB="${RDS_DB:-}"
+RDS_USER="${RDS_USER:-}"
+RDS_PASS="${RDS_PASS:-}"
 
 if [[ ! -f "${ARTIFACT_PATH}" ]]; then
   echo "ERROR: Artifact not found at ${ARTIFACT_PATH}"
@@ -25,6 +29,19 @@ sudo tar -xzf "${ARTIFACT_PATH}" -C "${RELEASE_DIR}"
 echo "Running basic syntax checks"
 if command -v php >/dev/null 2>&1; then
   sudo find "${RELEASE_DIR}" -type f -name "*.php" -print0 | sudo xargs -0 -n1 php -l >/dev/null
+fi
+
+if [[ -n "${RDS_HOST}" && -n "${RDS_DB}" && -n "${RDS_USER}" && -n "${RDS_PASS}" && -f "${RELEASE_DIR}/config.php" ]]; then
+  echo "Writing RDS config.php into release"
+  sudo tee "${RELEASE_DIR}/config.php" >/dev/null <<PHP
+<?php
+
+\$host = '${RDS_HOST}';
+\$dbname = '${RDS_DB}';
+\$username = '${RDS_USER}';
+\$password = '${RDS_PASS}';
+\$port = 3306;
+PHP
 fi
 
 if [[ -f "${LAST_FILE}" ]]; then
