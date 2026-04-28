@@ -1,4 +1,8 @@
 <?php
+// TEMP: force failure for rollback demo.
+echo 'Napaka baze';
+exit;
+
 require_once __DIR__ . '/config.php';
 
 $result = null;
